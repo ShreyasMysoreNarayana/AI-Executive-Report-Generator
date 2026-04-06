@@ -55,19 +55,27 @@ The system is designed to improve clarity, reduce manual effort, and support fas
 ## 📂 Project Structure
 Executive Report Automation/
 │
+
 ├── app.py
+
 ├── report_builder.py
+
 ├── .env
+
 │
 ├── templates/
 │   └── index.html
+
 │
 ├── static/
 │   ├── style.css
 │   └── script.js
+
 │
 ├── uploads/
+
 └── outputs/
+
 
 
 ---
