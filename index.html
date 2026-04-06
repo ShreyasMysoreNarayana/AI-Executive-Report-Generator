@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guardians Embrace Executive Reporting Console</title>
+    <link rel="stylesheet" href="/static/style.css?v=5" />
+</head>
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark">GE</div>
+                <div>
+                    <div class="brand-title">Enterprise</div>
+                    <div class="brand-subtitle">Executive Reporting Console</div>
+                </div>
+            </div>
+        </header>
+
+        <main class="layout">
+            <section class="hero-panel">
+                <span class="tag">Internal Reporting Platform</span>
+                <h1>Generate Executive Reports</h1>
+                <p class="hero-copy">
+                    Upload source files, choose the report format, and generate a polished
+                    leadership-ready document for executive review, operations, action planning,
+                    or spoken summaries.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-label">Formats</span>
+                        <span class="stat-value">5 report modes</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Output</span>
+                        <span class="stat-value">Word + Email</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Use</span>
+                        <span class="stat-value">Leadership-ready</span>
+                    </div>
+                </div>
+
+                <div class="hero-note">
+                    Designed for monthly leadership reviews, structured internal reporting,
+                    and clear follow-up planning across teams and projects.
+                </div>
+            </section>
+
+            <section class="form-panel">
+                <div class="panel-header">
+                    <h2>Monthly Report Generator</h2>
+                    <p>
+                        Complete the form below and submit source files to generate a structured report.
+                    </p>
+                </div>
+
+                <form id="reportForm" class="report-form">
+                    <div class="grid two-col">
+                        <div class="field">
+                            <label for="month">Reporting Month</label>
+                            <input
+                                type="text"
+                                id="month"
+                                name="month"
+                                placeholder="March 2026"
+                                required
+                            />
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Send Report To</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="yourname@example.com"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="grid two-col">
+                        <div class="field">
+                            <label for="report_type">Report Type</label>
+                            <select id="report_type" name="report_type" required>
+                                <option value="executive">Executive Report</option>
+                                <option value="operational">Operational Report</option>
+                                <option value="action_plan">Action Plan Report</option>
+                                <option value="speechify">Speech Summary</option>
+                                <option value="dashboard_summary">Dashboard Summary</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="files">Upload Files</label>
+                            <input
+                                type="file"
+                                id="files"
+                                name="files"
+                                multiple
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="notes">Optional Guidance</label>
+                        <textarea
+                            id="notes"
+                            name="notes"
+                            rows="4"
+                            placeholder="Example: Focus on donor communication blockers, response-rate decline, ownership ambiguity, and founder-level priorities."
+                        ></textarea>
+                        <small>
+                            Use this to guide emphasis or context for the selected report mode.
+                        </small>
+                    </div>
+
+                    <section class="report-guide">
+                        <article class="guide-card">
+                            <h3>Executive</h3>
+                            <p>Leadership summary focused on risks, trends, and priorities.</p>
+                        </article>
+                        <article class="guide-card">
+                            <h3>Operational</h3>
+                            <p>Execution-focused report covering work streams and blockers.</p>
+                        </article>
+                        <article class="guide-card">
+                            <h3>Action Plan</h3>
+                            <p>Concise output centered on tasks, blockers, and ownership needs.</p>
+                        </article>
+                        <article class="guide-card">
+                            <h3>Speech Summary</h3>
+                            <p>Audio-friendly narrative designed for spoken executive listening.</p>
+                        </article>
+                        <article class="guide-card">
+                            <h3>Dashboard</h3>
+                            <p>Short summary blocks intended for drill-down reporting and review.</p>
+                        </article>
+                    </section>
+
+                    <div class="button-row">
+                        <button type="submit" id="submitBtn">Generate Report</button>
+                    </div>
+                </form>
+
+                <div id="statusBox" class="status-box hidden"></div>
+
+                <div id="downloadBox" class="download-box hidden">
+                    <a id="downloadLink" href="#" target="_blank">Download generated report</a>
+                </div>
+
+                <div id="loadingOverlay" class="loading-overlay hidden">
+                    <div class="loading-card">
+                        <div class="spinner"></div>
+                        <h3>Generating Report...</h3>
+                        <p>
+                            Your files are being processed. This may take a little time depending on
+                            file size and report complexity.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/script.js?v=5"></script>
+</body>
+</html>
